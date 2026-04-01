@@ -1,0 +1,382 @@
+/* ==========================================
+   SkatteForge Pro 7.5 - Enhanced Styles
+   ========================================== */
+
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+/* Base Styles */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #070A12;
+  color: #FFFFFF;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Space Grotesk', sans-serif;
+  letter-spacing: -0.02em;
+  color: #FFFFFF;
+}
+
+.font-mono {
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+/* Ensure all text is visible */
+p, span, div, label, input, textarea {
+  color: inherit;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0E1322;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2D6BFF60;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2D6BFF80;
+}
+
+/* Selection */
+::selection {
+  background: #2D6BFF40;
+  color: #FFFFFF;
+}
+
+/* Input Styling - Ensure visible text */
+input, textarea {
+  color: #FFFFFF !important;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #6B7280 !important;
+}
+
+/* Tab Styling */
+[data-state="active"][role="tab"] {
+  background-color: #2D6BFF !important;
+  color: #FFFFFF !important;
+}
+
+/* Progress Bar */
+[data-slot="progress-indicator"] {
+  background-color: #2D6BFF !important;
+}
+
+/* Button Focus States */
+button:focus-visible {
+  outline: 2px solid #2D6BFF;
+  outline-offset: 2px;
+}
+
+/* Card Hover Effects */
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Glow Effects */
+.glow-blue {
+  box-shadow: 0 0 40px rgba(45, 107, 255, 0.2);
+}
+
+.glow-blue-strong {
+  box-shadow: 0 0 80px rgba(45, 107, 255, 0.3);
+}
+
+/* Animation Classes */
+.fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-in-left {
+  animation: slideInLeft 0.6s ease-out forwards;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slide-in-right {
+  animation: slideInRight 0.6s ease-out forwards;
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Status Indicator Pulse */
+.status-pulse {
+  animation: statusPulse 2s ease-in-out infinite;
+}
+
+@keyframes statusPulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Gradient Text */
+.gradient-text {
+  background: linear-gradient(135deg, #FFFFFF 0%, #2D6BFF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Blueprint Grid Animation */
+@keyframes gridPulse {
+  0%, 100% {
+    opacity: 0.08;
+  }
+  50% {
+    opacity: 0.15;
+  }
+}
+
+.blueprint-grid {
+  animation: gridPulse 4s ease-in-out infinite;
+}
+
+/* Card Border Pulse */
+@keyframes borderPulse {
+  0%, 100% {
+    border-color: rgba(255, 255, 255, 0.08);
+  }
+  50% {
+    border-color: rgba(45, 107, 255, 0.3);
+  }
+}
+
+.card-pulse {
+  animation: borderPulse 4s ease-in-out infinite;
+}
+
+/* Hover Lift Effect */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Number Counter Animation */
+.counter-animate {
+  animation: counterUp 0.5s ease-out;
+}
+
+@keyframes counterUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Focus Visible for Accessibility */
+:focus-visible {
+  outline: 2px solid #2D6BFF;
+  outline-offset: 2px;
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Responsive Typography */
+@media (max-width: 640px) {
+  h1 {
+    font-size: 2.5rem !important;
+  }
+  
+  h2 {
+    font-size: 2rem !important;
+  }
+}
+
+/* Dialog/Modal Styling */
+[role="dialog"] {
+  background-color: #0E1322 !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Accordion Styling */
+[data-state="open"] > [data-accordion-trigger] {
+  color: #2D6BFF;
+}
+
+/* Tooltip Styling */
+[data-slot="tooltip-content"] {
+  background-color: #0E1322 !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: #FFFFFF !important;
+}
+
+/* Badge Styling */
+.badge-glow {
+  box-shadow: 0 0 20px rgba(45, 107, 255, 0.3);
+}
+
+/* Noise Texture Overlay */
+.noise-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0.03;
+  z-index: 1000;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Section Transitions */
+section {
+  position: relative;
+}
+
+/* Perspective for 3D effects */
+.perspective-container {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+/* Code Block Styling */
+.code-block {
+  background: #070A12;
+  border-radius: 12px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #FFFFFF;
+}
+
+/* Download Animation */
+.download-animation {
+  animation: downloadPulse 0.3s ease;
+}
+
+@keyframes downloadPulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Terminal Cursor Blink */
+.cursor-blink {
+  animation: cursorBlink 1s step-end infinite;
+}
+
+@keyframes cursorBlink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* AI Mode Glow */
+.ai-glow {
+  box-shadow: 0 0 30px rgba(45, 107, 255, 0.4);
+}
+
+/* Progress Bar Animation */
+@keyframes progressShine {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.progress-shine {
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  background-size: 200% 100%;
+  animation: progressShine 2s linear infinite;
+}
